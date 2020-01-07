@@ -10,20 +10,41 @@ import sys
 import district
 from utils.log import *
 
+# cities = {
+#     'bj': '北京',
+#     'cd': '成都',
+#     'cq': '重庆',
+#     'cs': '长沙',
+#     'dg': '东莞',
+#     'dl': '大连',
+#     'fs': '佛山',
+#     'gz': '广州',
+#     'hz': '杭州',
+#     'hf': '合肥',
+#     'jn': '济南',
+#     'nj': '南京',
+#     'qd': '青岛',
+#     'sh': '上海',
+#     'sz': '深圳',
+#     'su': '苏州',
+#     'sy': '沈阳',
+#     'tj': '天津',
+#     'wh': '武汉',
+#     'xm': '厦门',
+#     'yt': '烟台',
+#     'wx': '无锡',
+# }
+
 cities = {
     'bj': '北京',
     'cd': '成都',
     'cq': '重庆',
     'cs': '长沙',
     'dg': '东莞',
-    'dl': '大连',
-    'fs': '佛山',
     'gz': '广州',
     'hz': '杭州',
     'hf': '合肥',
-    'jn': '济南',
     'nj': '南京',
-    'qd': '青岛',
     'sh': '上海',
     'sz': '深圳',
     'su': '苏州',
@@ -31,10 +52,8 @@ cities = {
     'tj': '天津',
     'wh': '武汉',
     'xm': '厦门',
-    'yt': '烟台',
     'wx': '无锡',
 }
-
 lianjia_cities = cities
 beike_cities = cities
 
@@ -97,7 +116,8 @@ def update():
     for k, v in cities.items():
         city = get_city(k,v)
         if city is not None:
-            district.update(k)
+            _,_,totalHouse,average = district.update(k)
+            print(city,totalHouse,average)
 
 
 if __name__ == '__main__':
