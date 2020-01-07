@@ -1,4 +1,6 @@
 import random
+import time
+
 import requests
 
 USER_AGENTS = [
@@ -39,6 +41,16 @@ def create_headers():
 def reqPage(url):
     print("req page:",url)
     headers = create_headers()
-    response = requests.get(url, timeout=10, headers=headers)
-    html = response.content
-    return html
+    sleepCount = 0
+
+    while 1:
+        try:
+            response = requests.get(url, timeout=10, headers=headers)
+            html = response.content
+            return html
+        except:
+            sleepCount += 1
+            print("readpage sleepCount",sleepCount, url)
+            time.sleep(5)
+
+

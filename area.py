@@ -6,7 +6,7 @@ from utils.request import *
 # from utils.log import *
 
 def update(city, disctrict):
-    #return pinyin_area ch_area disctrictTotalNum disctrictAverage
+    # return pinyin_area ch_area disctrictTotalNum disctrictAverage
     # get areas
     url = "https://{}.lianjia.com/{}".format(city, disctrict)
 
@@ -24,7 +24,7 @@ def update(city, disctrict):
     list = i.find_all("div")
     if len(list) != 2:
         # logger.error("get page err")
-        return None, None, None,None
+        return None, None, None, None
 
     areasList = list[1]
 
@@ -37,15 +37,15 @@ def update(city, disctrict):
             pinyin_areas.append(href)
 
             disctrictTotal += int(area_totalnum)
-            disctrictAverage += area_average*area_totalnum
+            disctrictAverage += int(area_average) * area_totalnum
             cn_areas.append(i.get_text())
             # print(i.get("href"))
             # print(i.get_text())
             print(i.get_text(), area_totalnum, area_average)
 
-    return pinyin_areas, cn_areas, disctrictTotal, area_average/disctrictTotal
+    return pinyin_areas, cn_areas, disctrictTotal, area_average / disctrictTotal
 
 
 if __name__ == '__main__':
-    _, _, t = update("sh", "ershoufang/pudong")
-    print("house num:", t)
+    _, _, t, average = update("sh", "ershoufang/pudong")
+    print("house num:", t, average)
