@@ -90,7 +90,7 @@ def update(area):
             else:
                 villageHouseInfo[positionInfo.get("href")] = [houseInfo(baseInfo, price, position)]
 
-        time.sleep(4)
+        time.sleep(10)
 
     return area_total, __average__(villageHouseInfo)
 

@@ -12,10 +12,10 @@ def update(city):
     url = "https://{}.lianjia.com/ershoufang".format(city)
     html = reqPage(url)
     soup = BeautifulSoup(html, "lxml")
-
     list = soup.find_all('div', attrs={'data-role': 'ershoufang'})
 
     houseTotalOfCity = 0
+    cityAverage = 0
     ch_district = []
     pinyin_district = []
     for i in list:
@@ -24,15 +24,16 @@ def update(city):
             href = i.get("href")
             if len(re.findall(r".*zhoubian", href)) == 0:
                 pinyin_district.append(href)
-                _, _, totalNumOfHouse = area.update(href)
+                _, _, totalNumOfHouse, areaAverage = area.update(city, href)
                 houseTotalOfCity += totalNumOfHouse
+                cityAverage += areaAverage * totalNumOfHouse
                 ch_district.append(i.get_text)
                 print(i.get("href"))
                 print(i.get_text())
 
-    return ch_district, pinyin_district, totalNumOfHouse
+    return ch_district, pinyin_district, totalNumOfHouse, areaAverage / totalNumOfHouse
 
 
 if __name__ == '__main__':
-    _, _, total = update("wh")
-    print(total, "in wuhan city")
+    _, _, total, average = update("wh")
+    print("house total num:", total, "average:", average, "in wuhan city")
