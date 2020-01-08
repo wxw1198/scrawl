@@ -40,9 +40,9 @@ class houseInfo:
         return self.__position__
 
 
-def update(area):
+def update(city: str, area: str) -> (int, int):
     # return 总的出售房屋套数 ;map[xiaoqu]housinfo
-    url = "https://sh.lianjia.com{}".format(area)
+    url = "https://{}.lianjia.com{}".format(city, area)
     html = reqPage(url)
     soup = BeautifulSoup(html, "lxml")
 
@@ -92,10 +92,10 @@ def update(area):
 
         time.sleep(10)
 
-    return area_total, __average__(villageHouseInfo)
+    return int(area_total), __average__(villageHouseInfo)
 
 
-def __average__(villageHouseInfo):
+def __average__(villageHouseInfo: dict) -> int:
     allVilageAverage = 0
     for (k, v) in villageHouseInfo.items():
         print(v[0].getVillageName())
@@ -107,7 +107,7 @@ def __average__(villageHouseInfo):
         allVilageAverage += villageTotalAverage / len(v)
         print("village average:", villageTotalAverage / len(v), "yuan/pingmi")
 
-    return villageTotalAverage / len(villageHouseInfo)
+    return int(villageTotalAverage / len(villageHouseInfo))
 
 
 def testAveragePrice():
