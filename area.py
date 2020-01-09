@@ -8,7 +8,6 @@ from utils.request import *
 # from utils.log import *
 def update(city, disctrict) -> (int, int):
     # return pinyin_area ch_area disctrictTotalNum disctrictAverage
-
     # get areas
     url = "https://{}.lianjia.com/{}".format(city, disctrict)
 
@@ -18,9 +17,6 @@ def update(city, disctrict) -> (int, int):
 
     cn_areas = []
     pinyin_areas = []
-
-    print(len(list))
-    print(type(list))
     i = list[0]
 
     list = i.find_all("div")
@@ -32,7 +28,10 @@ def update(city, disctrict) -> (int, int):
 
     disctrictTotal = 0
     disctrictAverage = 0
-    csv_file = os.getcwd() + "/{0}_{1}.csv".format(city, disctrict)
+
+    filename = disctrict
+    filename = filename.replace("/", "_")
+    csv_file = os.getcwd() + "/{0}_{1}.csv".format(city, filename)
     with open(csv_file, "w") as f:
         for i in areasList.find_all("a"):
             href = i.get("href")
@@ -48,7 +47,8 @@ def update(city, disctrict) -> (int, int):
                 # print(i.get_text())
 
                 print(i.get_text(), area_totalnum, area_average)
-                f.write(href, i.get_text, area_totalnum, area_average)
+                write_str = href + "," + i.get_text + "," + str(area_totalnum) + "," + str(area_average)
+                f.write(write_str)
 
     # print("area", url, disctrictTotal, int(area_average / disctrictTotal), "yuan/pingmi")
     print("in {0} have {1} houses, average {} yuan/pingmi".format(disctrict, disctrictTotal,

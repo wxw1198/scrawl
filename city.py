@@ -104,9 +104,9 @@ def update():
         for k, v in cities.items():
             city = get_city(k, v)
             if city is not None:
-
                 totalHouse, average = district.update(k)
-                f.write(city, k, totalHouse, average)
+                write_str = k + "," +city + "," + str(totalHouse) + "," + str(average)
+                f.write(write_str)
                 print(city, totalHouse, average)
 
 

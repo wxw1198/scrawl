@@ -1,4 +1,7 @@
+import os
 import re
+import time
+
 import bs4
 import threadpool
 
@@ -125,7 +128,32 @@ def main():
     task_pool.poll()
 
 
+def sayhello(str):
+    print("Hello ", str)
+    time.sleep(2)
+
+
+def testThreadPool():
+    name_list = ['xiaozi', 'aa', 'bb', 'cc']
+    start_time = time.time()
+    pool = threadpool.ThreadPool(10)
+    requests = threadpool.makeRequests(sayhello, name_list)
+    [pool.putRequest(req) for req in requests]
+    pool.wait()
+    print('%d second' % (time.time() - start_time))
+
+
+def testCsv():
+    csv_file = os.getcwd() + "/{0}_{1}.csv".format(11, 88)
+    with open(csv_file, "w") as f:
+        l = "2" + "," + "444"
+        f.write(l)
+
 if __name__ == '__main__':
+    testCsv()
+
+    testThreadPool()
+
     print(isNumReg("10.098对象"))  # True
     print(isNumReg("345对象"))  # True
 

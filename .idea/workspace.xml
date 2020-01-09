@@ -1,13 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6515c189-ce04-4e71-8950-26de688be6da" name="Default Changelist" comment="" />
+    <list default="true" id="6515c189-ce04-4e71-8950-26de688be6da" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/area.py" beforeDir="false" afterPath="$PROJECT_DIR$/area.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/city.py" beforeDir="false" afterPath="$PROJECT_DIR$/city.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/district.py" beforeDir="false" afterPath="$PROJECT_DIR$/district.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/village.py" beforeDir="false" afterPath="$PROJECT_DIR$/village.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1W3VYoEPiIOWuXI3faBCcwdKrhA" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -15,6 +27,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
@@ -63,9 +76,32 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="fang" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Python.district" />
+        <item itemvalue="Python.test" />
         <item itemvalue="Python.area" />
       </list>
     </recent_temporary>
@@ -95,7 +131,7 @@
       <workItem from="1578378320693" duration="2326000" />
       <workItem from="1578389156442" duration="10287000" />
       <workItem from="1578534486591" duration="269000" />
-      <workItem from="1578534777977" duration="9100000" />
+      <workItem from="1578534777977" duration="11136000" />
     </task>
     <servers />
   </component>
@@ -107,49 +143,49 @@
       <screen x="65" y="24" width="938" height="675" />
     </state>
     <state x="311" y="92" width="444" height="511" key="FileChooserDialogImpl/65.24.938.675@65.24.938.675" timestamp="1578534845912" />
-    <state width="1809" height="119" key="GridCell.Tab.0.bottom" timestamp="1578563057276">
+    <state width="1809" height="333" key="GridCell.Tab.0.bottom" timestamp="1578567464118">
       <screen x="65" y="24" width="1855" height="915" />
     </state>
-    <state width="1809" height="119" key="GridCell.Tab.0.bottom/65.24.1855.915@65.24.1855.915" timestamp="1578563057276" />
+    <state width="1809" height="333" key="GridCell.Tab.0.bottom/65.24.1855.915@65.24.1855.915" timestamp="1578567464118" />
     <state width="1234" height="229" key="GridCell.Tab.0.bottom/65.24.1855.916@65.24.1855.916" timestamp="1578447884730" />
     <state width="892" height="99" key="GridCell.Tab.0.bottom/65.24.938.675@65.24.938.675" timestamp="1578535415468" />
-    <state width="1809" height="119" key="GridCell.Tab.0.center" timestamp="1578563057276">
+    <state width="1809" height="333" key="GridCell.Tab.0.center" timestamp="1578567464116">
       <screen x="65" y="24" width="1855" height="915" />
     </state>
-    <state width="1809" height="119" key="GridCell.Tab.0.center/65.24.1855.915@65.24.1855.915" timestamp="1578563057276" />
+    <state width="1809" height="333" key="GridCell.Tab.0.center/65.24.1855.915@65.24.1855.915" timestamp="1578567464116" />
     <state width="1234" height="229" key="GridCell.Tab.0.center/65.24.1855.916@65.24.1855.916" timestamp="1578447884729" />
     <state width="892" height="99" key="GridCell.Tab.0.center/65.24.938.675@65.24.938.675" timestamp="1578535415467" />
-    <state width="1809" height="119" key="GridCell.Tab.0.left" timestamp="1578563057275">
+    <state width="1809" height="333" key="GridCell.Tab.0.left" timestamp="1578567464115">
       <screen x="65" y="24" width="1855" height="915" />
     </state>
-    <state width="1809" height="119" key="GridCell.Tab.0.left/65.24.1855.915@65.24.1855.915" timestamp="1578563057275" />
+    <state width="1809" height="333" key="GridCell.Tab.0.left/65.24.1855.915@65.24.1855.915" timestamp="1578567464115" />
     <state width="1234" height="229" key="GridCell.Tab.0.left/65.24.1855.916@65.24.1855.916" timestamp="1578447884729" />
     <state width="892" height="99" key="GridCell.Tab.0.left/65.24.938.675@65.24.938.675" timestamp="1578535415466" />
-    <state width="1809" height="119" key="GridCell.Tab.0.right" timestamp="1578563057276">
+    <state width="1809" height="333" key="GridCell.Tab.0.right" timestamp="1578567464117">
       <screen x="65" y="24" width="1855" height="915" />
     </state>
-    <state width="1809" height="119" key="GridCell.Tab.0.right/65.24.1855.915@65.24.1855.915" timestamp="1578563057276" />
+    <state width="1809" height="333" key="GridCell.Tab.0.right/65.24.1855.915@65.24.1855.915" timestamp="1578567464117" />
     <state width="1234" height="229" key="GridCell.Tab.0.right/65.24.1855.916@65.24.1855.916" timestamp="1578447884730" />
     <state width="892" height="99" key="GridCell.Tab.0.right/65.24.938.675@65.24.938.675" timestamp="1578535415467" />
-    <state width="1809" height="119" key="GridCell.Tab.1.bottom" timestamp="1578563057277">
+    <state width="1809" height="333" key="GridCell.Tab.1.bottom" timestamp="1578567464120">
       <screen x="65" y="24" width="1855" height="915" />
     </state>
-    <state width="1809" height="119" key="GridCell.Tab.1.bottom/65.24.1855.915@65.24.1855.915" timestamp="1578563057277" />
+    <state width="1809" height="333" key="GridCell.Tab.1.bottom/65.24.1855.915@65.24.1855.915" timestamp="1578567464120" />
     <state width="1234" height="92" key="GridCell.Tab.1.bottom/65.24.1855.916@65.24.1855.916" timestamp="1578447877148" />
-    <state width="1809" height="119" key="GridCell.Tab.1.center" timestamp="1578563057277">
+    <state width="1809" height="333" key="GridCell.Tab.1.center" timestamp="1578567464119">
       <screen x="65" y="24" width="1855" height="915" />
     </state>
-    <state width="1809" height="119" key="GridCell.Tab.1.center/65.24.1855.915@65.24.1855.915" timestamp="1578563057277" />
+    <state width="1809" height="333" key="GridCell.Tab.1.center/65.24.1855.915@65.24.1855.915" timestamp="1578567464119" />
     <state width="1234" height="92" key="GridCell.Tab.1.center/65.24.1855.916@65.24.1855.916" timestamp="1578447877148" />
-    <state width="1809" height="119" key="GridCell.Tab.1.left" timestamp="1578563057277">
+    <state width="1809" height="333" key="GridCell.Tab.1.left" timestamp="1578567464118">
       <screen x="65" y="24" width="1855" height="915" />
     </state>
-    <state width="1809" height="119" key="GridCell.Tab.1.left/65.24.1855.915@65.24.1855.915" timestamp="1578563057277" />
+    <state width="1809" height="333" key="GridCell.Tab.1.left/65.24.1855.915@65.24.1855.915" timestamp="1578567464118" />
     <state width="1234" height="92" key="GridCell.Tab.1.left/65.24.1855.916@65.24.1855.916" timestamp="1578447877148" />
-    <state width="1809" height="119" key="GridCell.Tab.1.right" timestamp="1578563057277">
+    <state width="1809" height="333" key="GridCell.Tab.1.right" timestamp="1578567464119">
       <screen x="65" y="24" width="1855" height="915" />
     </state>
-    <state width="1809" height="119" key="GridCell.Tab.1.right/65.24.1855.915@65.24.1855.915" timestamp="1578563057277" />
+    <state width="1809" height="333" key="GridCell.Tab.1.right/65.24.1855.915@65.24.1855.915" timestamp="1578567464119" />
     <state width="1234" height="92" key="GridCell.Tab.1.right/65.24.1855.916@65.24.1855.916" timestamp="1578447877148" />
     <state x="65" y="-4" width="938" height="703" key="SettingsEditor" timestamp="1578534757234">
       <screen x="65" y="24" width="938" height="675" />
@@ -164,6 +200,18 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/test.py</url>
+          <line>154</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/area.py</url>
+          <line>34</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
       <default-breakpoints>
         <breakpoint type="python-exception">
           <properties notifyOnTerminate="true" exception="BaseException">
@@ -174,7 +222,8 @@
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/fang$district.coverage" NAME="district Coverage Results" MODIFIED="1578554516597" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/fang$district.coverage" NAME="district Coverage Results" MODIFIED="1578567407729" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/fang$area.coverage" NAME="area Coverage Results" MODIFIED="1578462636488" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/fang$test.coverage" NAME="test Coverage Results" MODIFIED="1578566342670" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
