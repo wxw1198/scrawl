@@ -11,7 +11,7 @@ class houseInfo:
         self.__price__ = price
         self.__position__ = position
 
-    def getAveragePrice(self):
+    def getAveragePrice(self) -> int:
         # return 每平米价格，精确到元
         print(self.__base__, self.__price__)
         list = self.__base__.split("|")
@@ -21,7 +21,7 @@ class houseInfo:
             match_obj = re.match(regex_str, item)
 
             if match_obj is not None:
-                print(match_obj.string)
+                #print(match_obj.string)
                 strTrip = match_obj.string.strip(" ")
 
                 # 以下是整数和小数正确的正则表达式
@@ -51,7 +51,7 @@ def update(city: str, area: str) -> (int, int):
     css_class = soup.find(class_='total fl')
     area_total = css_class.find("span").get_text()
 
-    print(type(area_total))
+    #print(type(area_total))
     area_total = area_total.strip()
 
     if area_total == "0":
@@ -70,7 +70,7 @@ def update(city: str, area: str) -> (int, int):
 
         rs = soup.find_all("div", attrs={"class": "info clear"})
 
-        print(len(rs))
+        #print(len(rs))
         for unit in rs:
             baseInfo = unit.find('div', attrs={'class': 'houseInfo'})
             positionInfo = unit.find('div', attrs={'class': 'positionInfo'}).find('a', attrs={'data-el': 'region'})

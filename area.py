@@ -1,11 +1,12 @@
+import os
+from typing import List
 from bs4 import BeautifulSoup
 import village
 from utils.request import *
 
 
 # from utils.log import *
-
-def update(city, disctrict) -> ([], [], int, int):
+def update(city, disctrict) -> (int, int):
     # return pinyin_area ch_area disctrictTotalNum disctrictAverage
 
     # get areas
@@ -31,21 +32,28 @@ def update(city, disctrict) -> ([], [], int, int):
 
     disctrictTotal = 0
     disctrictAverage = 0
-    for i in areasList.find_all("a"):
-        href = i.get("href")
-        area_totalnum, area_average = village.update(city, href)
-        if area_totalnum is not None:
-            pinyin_areas.append(href)
+    csv_file = os.getcwd() + "/{0}_{1}.csv".format(city, disctrict)
+    with open(csv_file, "w") as f:
+        for i in areasList.find_all("a"):
+            href = i.get("href")
+            area_totalnum, area_average = village.update(city, href)
+            if area_totalnum is not None:
+                pinyin_areas.append(href)
 
-            disctrictTotal += int(area_totalnum)
-            disctrictAverage += int(area_average) * area_totalnum
+                disctrictTotal += int(area_totalnum)
+                disctrictAverage += int(area_average) * area_totalnum
 
-            cn_areas.append(i.get_text())
-            # print(i.get("href"))
-            # print(i.get_text())
-            print(i.get_text(), area_totalnum, area_average)
+                cn_areas.append(i.get_text())
+                # print(i.get("href"))
+                # print(i.get_text())
 
-    return pinyin_areas, cn_areas, disctrictTotal, int(area_average / disctrictTotal)
+                print(i.get_text(), area_totalnum, area_average)
+                f.write(href, i.get_text, area_totalnum, area_average)
+
+    # print("area", url, disctrictTotal, int(area_average / disctrictTotal), "yuan/pingmi")
+    print("in {0} have {1} houses, average {} yuan/pingmi".format(disctrict, disctrictTotal,
+                                                                  int(area_average / disctrictTotal)))
+    return disctrictTotal, int(area_average / disctrictTotal)
 
 
 if __name__ == '__main__':

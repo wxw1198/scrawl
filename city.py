@@ -5,7 +5,7 @@
 # 城市缩写和城市名的映射
 # 想抓取其他已有城市的话，需要把相关城市信息放入下面的字典中
 # 不过暂时只有下面这些城市在链家上是统一样式
-
+import os
 import sys
 import district
 from utils.log import *
@@ -39,20 +39,6 @@ cities = {
     'bj': '北京',
     'cd': '成都',
     'cq': '重庆',
-    'cs': '长沙',
-    'dg': '东莞',
-    'gz': '广州',
-    'hz': '杭州',
-    'hf': '合肥',
-    'nj': '南京',
-    'sh': '上海',
-    'sz': '深圳',
-    'su': '苏州',
-    'sy': '沈阳',
-    'tj': '天津',
-    'wh': '武汉',
-    'xm': '厦门',
-    'wx': '无锡',
 }
 lianjia_cities = cities
 beike_cities = cities
@@ -113,11 +99,15 @@ def get_city():
 
 
 def update():
-    for k, v in cities.items():
-        city = get_city(k,v)
-        if city is not None:
-            _,_,totalHouse,average = district.update(k)
-            print(city,totalHouse,average)
+    csv_file = os.getcwd() + "/{0}.csv".format("all_cities")
+    with open(csv_file, "w") as f:
+        for k, v in cities.items():
+            city = get_city(k, v)
+            if city is not None:
+
+                totalHouse, average = district.update(k)
+                f.write(city, k, totalHouse, average)
+                print(city, totalHouse, average)
 
 
 if __name__ == '__main__':

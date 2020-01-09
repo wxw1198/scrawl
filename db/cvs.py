@@ -2,10 +2,10 @@ import os
 
 
 class cvs:
-    def __init__(self,listInfo):
+    def __init__(self, listInfo):
         self.list = listInfo
 
-    def start(self,filename, ):
+    def start(self, filename, fmt='csv'):
         print(os.getcwd())  # 获得当前目录
         csv_file = os.getcwd() + "/{0}.csv".format(filename)
         with open(csv_file, "w") as f:
@@ -21,3 +21,10 @@ class cvs:
                     # print(date_string + "," + xiaoqu.text())
                     f.write(self.date_string + "," + ershou.text() + "\n")
         print("Finish crawl area: " + area_name + ", save data to : " + csv_file)
+
+    def get_area_ershou_info(self,city_name, area_name) ->(str,str,int,int):
+        #(strVillage,strUrl,totalNumOfHouse,average:int)
+
+
+
+if __name__ == '__main__':

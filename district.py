@@ -1,14 +1,15 @@
+import os
 import re
 from bs4 import BeautifulSoup
 from utils.request import *
 import area
 
 
-def update(city):
+def update(city) -> (int, int):
     # fa song qing qiu ,huo qu dao chengshi da quyv ,ranho zai gengxin
     # https://sh.lianjia.com/ershoufang/
     # get all ditricts
-    # return ch_districts, en_districts, totalNumOfHouse
+    # return totalNumOfHouse average
     url = "https://{}.lianjia.com/ershoufang".format(city)
     html = reqPage(url)
     soup = BeautifulSoup(html, "lxml")
@@ -18,20 +19,24 @@ def update(city):
     cityAverage = 0
     ch_district = []
     pinyin_district = []
-    for i in list:
-        list = i.find_all("a")
+    csv_file = os.getcwd() + "/{0}.csv".format(city)
+    with open(csv_file, "w") as f:
         for i in list:
-            href = i.get("href")
-            if len(re.findall(r".*zhoubian", href)) == 0:
-                pinyin_district.append(href)
-                _, _, totalNumOfHouse, areaAverage = area.update(city, href)
-                houseTotalOfCity += totalNumOfHouse
-                cityAverage += areaAverage * totalNumOfHouse
-                ch_district.append(i.get_text)
-                print(i.get("href"))
-                print(i.get_text())
+            list = i.find_all("a")
+            for i in list:
+                href = i.get("href")
+                if len(re.findall(r".*zhoubian", href)) == 0:
+                    pinyin_district.append(href)
+                    totalNumOfHouse, areaAverage = area.update(city, href)
+                    print(href, totalNumOfHouse, areaAverage)
+                    houseTotalOfCity += totalNumOfHouse
+                    cityAverage += areaAverage * totalNumOfHouse
+                    ch_district.append(i.get_text)
+                    print(i.get("href"))
+                    print(i.get_text())
+                    f.write(city, i.get_text, totalNumOfHouse, areaAverage)
 
-    return ch_district, pinyin_district, totalNumOfHouse, areaAverage / totalNumOfHouse
+    return houseTotalOfCity, cityAverage / houseTotalOfCity
 
 
 if __name__ == '__main__':

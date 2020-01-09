@@ -1,6 +1,6 @@
 import re
-
 import bs4
+import threadpool
 
 cities = {
     'bj': '北京',
@@ -91,7 +91,7 @@ def isNumReg(str):
     regFloat = '^\d+\.\d+|^[1-9]\d*\.\d+'
     # 接受0.00、0.360这样的为小数，不接受00.36，思路:若整数位为零,小数位可为任意整数，但小数位数至少为1位，若整数位为自然数打头，后面可添加任意多个整数，小数位至少1位
 
-    regIntOrFloat =  regFloat+ '|' +  regInt # 整数或小数
+    regIntOrFloat = regFloat + '|' + regInt  # 整数或小数
 
     # patternIntOrFloat = re.compile(regIntOrFloat)  # 创建pattern对象，以便后续可以复用
     # if patternIntOrFloat.search(str):
@@ -106,6 +106,23 @@ def isNumReg(str):
         return True
     else:
         return False
+
+
+def ThreadFun(arg1, arg2):
+    pass
+
+
+def main():
+    device_list = [1, 2, 3, 4, 5, 6, 7, 8]  # 需要处理的设备个数
+    task_pool = threadpool.ThreadPool(8)  # 8是线程池中线程的个数
+    request_list = []  # 存放任务列表
+    # 首先构造任务列表
+    for device in device_list:
+        request_list.append(threadpool.makeRequests(ThreadFun, [((device,), {})]))
+    # 将每个任务放到线程池中，等待线程池中线程各自读取任务，然后进行处理，使用了map函数，不了解的可以去了解一下。
+    map(task_pool.putRequest, request_list)
+    # 等待所有任务处理完成，则返回，如果没有处理完，则一直阻塞
+    task_pool.poll()
 
 
 if __name__ == '__main__':
