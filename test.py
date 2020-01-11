@@ -128,19 +128,34 @@ def main():
     task_pool.poll()
 
 
-def sayhello(str):
-    print("Hello ", str)
+def sayhello(params):
+    print("Hello ", params[0], params[1], params[2])
+    strWrite = params[0] +"," + params[1] +"\n"
+    params[2].write(strWrite)
     time.sleep(2)
 
 
+def paramList(cn_cities, f):
+    thread_param_list = []
+
+    for k, v in cn_cities:
+        group = [k, v, f]
+        thread_param_list.append(group)
+
+    return thread_param_list
+
+
 def testThreadPool():
-    name_list = ['xiaozi', 'aa', 'bb', 'cc']
-    start_time = time.time()
-    pool = threadpool.ThreadPool(10)
-    requests = threadpool.makeRequests(sayhello, name_list)
-    [pool.putRequest(req) for req in requests]
-    pool.wait()
-    print('%d second' % (time.time() - start_time))
+    with open("./1.csv", "w") as f:
+        pl = paramList(cities.items(), f)
+        print(type(pl))
+        start_time = time.time()
+        pool = threadpool.ThreadPool(len(pl))
+
+        requests = threadpool.makeRequests(sayhello, pl)
+        [pool.putRequest(req) for req in requests]
+        pool.wait()
+        print('%d second' % (time.time() - start_time))
 
 
 def testCsv():
@@ -148,6 +163,7 @@ def testCsv():
     with open(csv_file, "w") as f:
         l = "2" + "," + "444"
         f.write(l)
+
 
 if __name__ == '__main__':
     testCsv()

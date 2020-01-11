@@ -21,7 +21,7 @@ class houseInfo:
             match_obj = re.match(regex_str, item)
 
             if match_obj is not None:
-                #print(match_obj.string)
+                # print(match_obj.string)
                 strTrip = match_obj.string.strip(" ")
 
                 # 以下是整数和小数正确的正则表达式
@@ -51,7 +51,7 @@ def update(city: str, area: str) -> (int, int):
     css_class = soup.find(class_='total fl')
     area_total = css_class.find("span").get_text()
 
-    #print(type(area_total))
+    # print(type(area_total))
     area_total = area_total.strip()
 
     if area_total == "0":
@@ -70,7 +70,7 @@ def update(city: str, area: str) -> (int, int):
 
         rs = soup.find_all("div", attrs={"class": "info clear"})
 
-        #print(len(rs))
+        # print(len(rs))
         for unit in rs:
             baseInfo = unit.find('div', attrs={'class': 'houseInfo'})
             positionInfo = unit.find('div', attrs={'class': 'positionInfo'}).find('a', attrs={'data-el': 'region'})
@@ -90,7 +90,7 @@ def update(city: str, area: str) -> (int, int):
             else:
                 villageHouseInfo[positionInfo.get("href")] = [houseInfo(baseInfo, price, position)]
 
-            time.sleep(10)
+            time.sleep(5)
 
     return int(area_total), __average__(villageHouseInfo)
 
@@ -98,14 +98,13 @@ def update(city: str, area: str) -> (int, int):
 def __average__(villageHouseInfo: dict) -> int:
     allVilageAverage = 0
     for (k, v) in villageHouseInfo.items():
-        print(v[0].getVillageName())
         villageTotalAverage = 0
 
-        print(v[0].getVillageName(), k)
+        #print("1111111111",v[0].getVillageName(), k)
         for item in v:
             villageTotalAverage += item.getAveragePrice()
         allVilageAverage += villageTotalAverage / len(v)
-        print("village average:", villageTotalAverage / len(v), "yuan/pingmi")
+        print("village average:",k, villageTotalAverage / len(v), "yuan/pingmi")
 
     return int(villageTotalAverage / len(villageHouseInfo))
 

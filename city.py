@@ -7,8 +7,14 @@
 # 不过暂时只有下面这些城市在链家上是统一样式
 import os
 import sys
+import threading
+import time
+
+import threadpool
+from threading import Thread, Lock
 import district
-from utils.log import *
+
+# from utils.log import *
 
 # cities = {
 #     'bj': '北京',
@@ -72,42 +78,63 @@ def get_chinese_city(en):
     return cities.get(en, None)
 
 
-def get_city():
-    city = None
-    # 允许用户通过命令直接指定
-    if len(sys.argv) < 2:
-        print("Wait for your choice.")
-        # 让用户选择爬取哪个城市的二手房小区价格数据
-        prompt = create_prompt_text()
-        city = input(prompt)
-    elif len(sys.argv) == 2:
-        city = str(sys.argv[1])
-        print("City is: {0}".format(city))
-    else:
-        print("At most accept one parameter.")
-        exit(1)
+# def get_city():
+#     city = None
+#     # 允许用户通过命令直接指定
+#     if len(sys.argv) < 2:
+#         print("Wait for your choice.")
+#         # 让用户选择爬取哪个城市的二手房小区价格数据
+#         prompt = create_prompt_text()
+#         city = input(prompt)
+#     elif len(sys.argv) == 2:
+#         city = str(sys.argv[1])
+#         print("City is: {0}".format(city))
+#     else:
+#         print("At most accept one parameter.")
+#         exit(1)
+#
+#     chinese_city = get_chinese_city(city)
+#     if chinese_city is not None:
+#         message = 'OK, start to crawl ' + get_chinese_city(city)
+#         print(message)
+#         logger.info(message)
+#     else:
+#         print("No such city, please check your input.")
+#         exit(1)
+#     return city
 
-    chinese_city = get_chinese_city(city)
-    if chinese_city is not None:
-        message = 'OK, start to crawl ' + get_chinese_city(city)
-        print(message)
-        logger.info(message)
-    else:
-        print("No such city, please check your input.")
-        exit(1)
-    return city
+lock = threading.Lock()
 
+def get_city_ershou_info(params):
+    print(params)
+    # city = get_city(k, v)
+    # if city is not None:
+    totalHouse, average = district.update(params[0])
+    write_str = params[0] + "," + params[1]+ "," + str(totalHouse) + "," + str(average) + "\n"
+    lock.acquire()
+    params[2].write(write_str)
+    lock.release()
+    print(params[1], totalHouse, average)
+
+def paramList(cn_cities, f):
+    thread_param_list = []
+    for k, v in cn_cities:
+        group = [k, v, f]
+        thread_param_list.append(group)
+
+    return thread_param_list
 
 def update():
     csv_file = os.getcwd() + "/{0}.csv".format("all_cities")
     with open(csv_file, "w") as f:
-        for k, v in cities.items():
-            city = get_city(k, v)
-            if city is not None:
-                totalHouse, average = district.update(k)
-                write_str = k + "," +city + "," + str(totalHouse) + "," + str(average)
-                f.write(write_str)
-                print(city, totalHouse, average)
+
+        start_time = time.time()
+        pool = threadpool.ThreadPool(len(cities.items()))
+
+        requests = threadpool.makeRequests(get_city_ershou_info, paramList(cities.items(),f))
+        [pool.putRequest(req) for req in requests]
+        pool.wait()
+        print('%d second' % (time.time() - start_time))
 
 
 if __name__ == '__main__':

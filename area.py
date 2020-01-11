@@ -41,17 +41,15 @@ def update(city, disctrict) -> (int, int):
 
                 disctrictTotal += int(area_totalnum)
                 disctrictAverage += int(area_average) * area_totalnum
-
                 cn_areas.append(i.get_text())
-                # print(i.get("href"))
-                # print(i.get_text())
 
                 print(i.get_text(), area_totalnum, area_average)
-                write_str = href + "," + i.get_text + "," + str(area_totalnum) + "," + str(area_average)
+                write_str = href + "," + i.get_text() + "," + str(area_totalnum) + "," + str(area_average) + "\n"
                 f.write(write_str)
+                f.flush()
 
     # print("area", url, disctrictTotal, int(area_average / disctrictTotal), "yuan/pingmi")
-    print("in {0} have {1} houses, average {} yuan/pingmi".format(disctrict, disctrictTotal,
+    print("in {0} have {1} houses, average {3} yuan/pingmi".format(disctrict, disctrictTotal,
                                                                   int(area_average / disctrictTotal)))
     return disctrictTotal, int(area_average / disctrictTotal)
 

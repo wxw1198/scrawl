@@ -28,13 +28,11 @@ def update(city) -> (int, int):
                 if len(re.findall(r".*zhoubian", href)) == 0:
                     pinyin_district.append(href)
                     totalNumOfHouse, areaAverage = area.update(city, href)
-                    print(href, totalNumOfHouse, areaAverage)
+                    print(href, i.get_text(), totalNumOfHouse, areaAverage)
                     houseTotalOfCity += totalNumOfHouse
                     cityAverage += areaAverage * totalNumOfHouse
                     ch_district.append(i.get_text)
-                    print(i.get("href"))
-                    print(i.get_text())
-                    write_str = city + "," + i.get_text + "," + str(totalNumOfHouse) + "," + str(areaAverage)
+                    write_str = city + "," + i.get_text + "," + str(totalNumOfHouse) + "," + str(areaAverage) + "\n"
                     f.write(write_str)
 
     return houseTotalOfCity, cityAverage / houseTotalOfCity
