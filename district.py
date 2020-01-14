@@ -31,8 +31,8 @@ def update(city) -> (int, int):
                     print(href, i.get_text(), totalNumOfHouse, areaAverage)
                     houseTotalOfCity += totalNumOfHouse
                     cityAverage += areaAverage * totalNumOfHouse
-                    ch_district.append(i.get_text)
-                    write_str = city + "," + i.get_text + "," + str(totalNumOfHouse) + "," + str(areaAverage) + "\n"
+                    ch_district.append(i.get_text())
+                    write_str = city + "," + i.get_text() + "," + str(totalNumOfHouse) + "," + str(areaAverage) + "\n"
                     f.write(write_str)
 
     return houseTotalOfCity, cityAverage / houseTotalOfCity

@@ -49,8 +49,8 @@ def update(city, disctrict) -> (int, int):
                 f.flush()
 
     # print("area", url, disctrictTotal, int(area_average / disctrictTotal), "yuan/pingmi")
-    print("in {0} have {1} houses, average {3} yuan/pingmi".format(disctrict, disctrictTotal,
-                                                                  int(area_average / disctrictTotal)))
+    print("in {0} have {1} houses, average {2} yuan/pingmi".format(disctrict, disctrictTotal,
+                                                                   int(area_average / disctrictTotal)))
     return disctrictTotal, int(area_average / disctrictTotal)
 
 
