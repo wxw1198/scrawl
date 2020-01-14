@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6515c189-ce04-4e71-8950-26de688be6da" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/test2.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/area.py" beforeDir="false" afterPath="$PROJECT_DIR$/area.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/city.py" beforeDir="false" afterPath="$PROJECT_DIR$/city.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/district.py" beforeDir="false" afterPath="$PROJECT_DIR$/district.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/village.py" beforeDir="false" afterPath="$PROJECT_DIR$/village.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -185,6 +180,7 @@
       <workItem from="1578389156442" duration="10287000" />
       <workItem from="1578534486591" duration="269000" />
       <workItem from="1578534777977" duration="25934000" />
+      <workItem from="1579006727389" duration="105000" />
     </task>
     <task id="LOCAL-00001" summary="store file">
       <created>1578567515605</created>
