@@ -19,7 +19,7 @@ def update(city) -> (int, int):
     cityAverage = 0
     ch_district = []
     pinyin_district = []
-    csv_file = os.getcwd() + "/{0}.csv".format(city)
+    csv_file = os.getcwd() + "/result/{0}.csv".format(city)
     with open(csv_file, "w") as f:
         for i in list:
             list = i.find_all("a")

@@ -31,7 +31,7 @@ def update(city, disctrict) -> (int, int):
 
     filename = disctrict
     filename = filename.replace("/", "_")
-    csv_file = os.getcwd() + "/{0}_{1}.csv".format(city, filename)
+    csv_file = os.getcwd() + "/result/{0}_{1}.csv".format(city, filename)
     with open(csv_file, "w") as f:
         for i in areasList.find_all("a"):
             href = i.get("href")
@@ -55,5 +55,5 @@ def update(city, disctrict) -> (int, int):
 
 
 if __name__ == '__main__':
-    _, _, t = update("sh", "ershoufang/pudong")
+    _, t = update("sh", "ershoufang/pudong")
     print("house num:", t)
