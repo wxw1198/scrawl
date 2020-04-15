@@ -144,7 +144,7 @@ def paramList(cn_cities, f):
     return thread_param_list
 
 def update():
-    csv_file = os.getcwd() + "/{0}.csv".format("all_cities")
+    csv_file = os.getcwd() + "/result/{0}.csv".format("all_cities")
     with open(csv_file, "w") as f:
 
         start_time = time.time()

@@ -12,7 +12,7 @@ def update(city, disctrict) -> (int, int):
     url = "https://{}.lianjia.com/{}".format(city, disctrict)
 
     html = reqPage(url)
-    soup = BeautifulSoup(html, "lxml")
+    soup = BeautifulSoup(html, "html.parser")
     list = soup.find_all('div', attrs={'data-role': 'ershoufang'})
 
     cn_areas = []

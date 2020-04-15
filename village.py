@@ -44,7 +44,8 @@ def update(city: str, area: str) -> (int, int):
     # return 总的出售房屋套数 ;map[xiaoqu]housinfo
     url = "https://{}.lianjia.com{}".format(city, area)
     html = reqPage(url)
-    soup = BeautifulSoup(html, "lxml")
+    #soup = BeautifulSoup(html, "lxml")
+    soup = BeautifulSoup(html, "html.parser")
 
     villageHouseInfo = {}
 
@@ -66,7 +67,9 @@ def update(city: str, area: str) -> (int, int):
         if i != 1:
             newPageUrl = url + "pg{}".format(i)
             html = reqPage(newPageUrl)
-            soup = BeautifulSoup(html, "lxml")
+            #soup = BeautifulSoup(html, "lxml")
+
+            soup = BeautifulSoup(html, "html.parser")
 
         rs = soup.find_all("div", attrs={"class": "info clear"})
 
