@@ -1,11 +1,11 @@
+import time
 import pymysql
 
 
-def init():
+def db_init():
     global db
     try:
         db = pymysql.connect("127.0.0.1", "root", "123", "houseDB", charset='utf8')
-
         print("connect mysql ok")
 
     except:
@@ -17,45 +17,65 @@ def init():
 def AddCity(cityName, averagePrice, totalNumber, url):
     cursor = db.cursor()
 
-    sql = "INSERT INTO cities(cityName,averagePrice,totalNumber) values(%s,%s,%s,%s)"
+    sql = "INSERT INTO cities(cityName,averagePrice,totalNumber,url,timeNow) values(%s,%s,%s,%s,%s)"
     try:
-        cursor.execute(sql, (cityName, averagePrice, totalNumber, url)),
+        cursor.execute(sql, (cityName, averagePrice, totalNumber, url, time.strftime("%Y-%m-%d"))),
         db.commit()
-    except:
+    except  Exception as e:
+        print("add city:", e)
         db.rollback()
 
 
-def AddArea(areaName, averagePrice, totalNumber, url):
+def AddCountryTown(countyTownname, averagePrice, totalNumber, url):
     cursor = db.cursor()
 
-    sql = "INSERT INTO cities(areaName,averagePrice,totalNumber) values(%s,%s,%s,%s)"
+    sql = "INSERT INTO countyTowns(countyTownname,averagePrice,totalNumber,url,timeNow) values(%s,%s,%s,%s,%s)"
     try:
-        cursor.execute(sql, (areaName, averagePrice, totalNumber, url)),
+        cursor.execute(sql, (countyTownname, averagePrice, totalNumber, url, time.strftime("%Y-%m-%d"))),
         db.commit()
-    except:
+    except  Exception as e:
+        print("add country:",e)
         db.rollback()
 
 
 def AddVillage(villageName, averagePrice, totalNumber, url):
     cursor = db.cursor()
 
-    sql = "INSERT INTO villages(villageName,averagePrice,totalNumber,url) values(%s,%s,%s,%s)"
+    sql = "INSERT INTO villages(villageName,averagePrice,count,url,timeNow) values(%s,%s,%s,%s,%s)"
     try:
-        cursor.execute(sql, (villageName, averagePrice, totalNumber, url))
+        cursor.execute(sql, (villageName, averagePrice, totalNumber, url, time.strftime("%Y-%m-%d")))
         db.commit()
-    except:
+    except  Exception as e:
+        print("vaillage:", e)
         db.rollback()
 
 
-def AddDistict(distictName, averagePrice, totalNumber, url):
+def AddHouseInfo(baseInfo, url, priceInfo, positionInfo):
     cursor = db.cursor()
 
-    sql = "INSERT INTO disticts(distictName,averagePrice,totalNumber,url) values(%s,%s,%s,%s)"
+    sql = "INSERT INTO houseInfo(baseInfo,url,priceInfo,positionInfo,timeNow) values(%s,%s,%s,%s,%s)"
+
+   # print(url)
     try:
-        cursor.execute(sql, (distictName, averagePrice, totalNumber, url))
+        cursor.execute(sql, (baseInfo, url, priceInfo, positionInfo, time.strftime("%Y-%m-%d")))
         db.commit()
-    except:
+    except Exception as e:
+        print(e)
+        print(url)
         db.rollback()
+
+
+def AddDistrict(districtName, averagePrice, totalNumber, url):
+    cursor = db.cursor()
+
+    sql = "INSERT INTO districts(districtName,averagePrice,count ,url,timeNow) values(%s,%s,%s,%s,%s)"
+    try:
+        cursor.execute(sql, (districtName, averagePrice, totalNumber, url, time.strftime("%Y-%m-%d")))
+        db.commit()
+    except  Exception as e:
+        print("AddDistict:",e)
+        db.rollback()
+
 
 # def ReadDB(name):
 #     sql = "SELECT * FROM  values(%s)"
@@ -73,4 +93,5 @@ def AddDistict(distictName, averagePrice, totalNumber, url):
 
 
 if __name__ == '__main__':
-    init()
+    db_init()
+    AddDistrict("111","23","555555","http:2333")

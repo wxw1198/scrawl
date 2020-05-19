@@ -1,43 +1,67 @@
 import os
-import re
+from typing import List
 from bs4 import BeautifulSoup
+import village
 from utils.request import *
-import area
+from db.mysql import *
 
 
-def update(city) -> (int, int):
-    # fa song qing qiu ,huo qu dao chengshi da quyv ,ranho zai gengxin
-    # https://sh.lianjia.com/ershoufang/
-    # get all ditricts
-    # return totalNumOfHouse average
-    url = "https://{}.lianjia.com/ershoufang".format(city)
+# from utils.log import *
+def update(city, disctrict) -> (int, int):
+    # return pinyin_area ch_area disctrictTotalNum disctrictAverage
+    # get areas
+    url = "https://{}.lianjia.com/{}".format(city, disctrict)
+
     html = reqPage(url)
-    soup = BeautifulSoup(html, "lxml")
+    soup = BeautifulSoup(html, "html.parser")
     list = soup.find_all('div', attrs={'data-role': 'ershoufang'})
 
-    houseTotalOfCity = 0
-    cityAverage = 0
-    ch_district = []
-    pinyin_district = []
-    csv_file = os.getcwd() + "/result/{0}.csv".format(city)
-    with open(csv_file, "w") as f:
-        for i in list:
-            list = i.find_all("a")
-            for i in list:
-                href = i.get("href")
-                if len(re.findall(r".*zhoubian", href)) == 0:
-                    pinyin_district.append(href)
-                    totalNumOfHouse, areaAverage = area.update(city, href)
-                    print(href, i.get_text(), totalNumOfHouse, areaAverage)
-                    houseTotalOfCity += totalNumOfHouse
-                    cityAverage += areaAverage * totalNumOfHouse
-                    ch_district.append(i.get_text())
-                    write_str = city + "," + i.get_text() + "," + str(totalNumOfHouse) + "," + str(areaAverage) + "\n"
-                    f.write(write_str)
+    cn_areas = []
+    pinyin_areas = []
+    i = list[0]
 
-    return houseTotalOfCity, cityAverage / houseTotalOfCity
+    list = i.find_all("div")
+    if len(list) != 2:
+        # logger.error("get page err")
+        return None, None, None, None
+
+    areasList = list[1]
+
+    disctrictTotal = 0
+    disctrictAverage = 0
+
+    filename = disctrict
+    filename = filename.replace("/", "_")
+    csv_file = os.getcwd() + "/result/{0}_{1}.csv".format(city, filename)
+    #with open(csv_file, "w") as f:
+    for i in areasList.find_all("a"):
+        href = i.get("href")
+        area_totalnum, area_average = village.update(city, href)
+        if area_totalnum is not None:
+            pinyin_areas.append(href)
+
+            disctrictTotal += int(area_totalnum)
+            disctrictAverage += int(area_average) * area_totalnum
+            cn_areas.append(i.get_text())
+
+            AddDistrict(filename,area_average,area_totalnum,href)
+            #print(i.get_text(), area_totalnum, area_average)
+            #write_str = href + "," + i.get_text() + "," + str(area_totalnum) + "," + str(area_average) + "\n"
+                # f.write(write_str)
+                # f.flush()
+
+    if disctrictTotal != 0 :
+    # print("area", url, disctrictTotal, int(area_average / disctrictTotal), "yuan/pingmi")
+        print("in {0} have {1} houses, average {2} yuan/pingmi".format(disctrict, disctrictTotal,
+                                                                   int(disctrictAverage / disctrictTotal)))
+        return disctrictTotal, int(disctrictAverage / disctrictTotal)
+    else :
+        print("err:",url)
+        return  0,0
+
 
 
 if __name__ == '__main__':
+    db_init()
     _, _, total, average = update("wh")
     print("house total num:", total, "average:", average, "in wuhan city")

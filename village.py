@@ -1,5 +1,7 @@
 import re
 import time
+from db.mysql import *
+
 
 from utils.request import *
 from bs4 import BeautifulSoup
@@ -13,7 +15,7 @@ class houseInfo:
 
     def getAveragePrice(self) -> int:
         # return 每平米价格，精确到元
-        print(self.__base__, self.__price__)
+        #print(self.__base__, self.__price__)
         list = self.__base__.split("|")
         for item in list:
 
@@ -63,6 +65,7 @@ def update(city: str, area: str) -> (int, int):
     totalPage = eval(page_data).get("totalPage")
     # page_box.get("page-url")
 
+
     for i in range(1, 1 + int(totalPage)):
         if i != 1:
             newPageUrl = url + "pg{}".format(i)
@@ -79,12 +82,22 @@ def update(city: str, area: str) -> (int, int):
             positionInfo = unit.find('div', attrs={'class': 'positionInfo'}).find('a', attrs={'data-el': 'region'})
             priceinfo = unit.find('div', attrs={'class': 'totalPrice'})
 
+            titleInfo = unit.find('div', attrs={'class' : 'title'}).find("a")
+            if titleInfo is None :
+                print("err::::::",unit.find('div', attrs={'class' : 'title'}))
+            houseUrl = titleInfo.get('href').strip()
+
+
             # positionInfo = position.find('a', attrs={'data-el': 'region'})
             # print(positionInfo.get("href"), positionInfo.get_text())
 
-            position = positionInfo.get_text()
-            price = priceinfo.find("span").get_text()
-            baseInfo = baseInfo.get_text()
+            position = positionInfo.get_text().strip()
+            price = priceinfo.find("span").get_text().strip()
+            baseInfo = baseInfo.get_text().strip()
+
+            #print(position,url,houseInfo,price)
+
+            AddHouseInfo(baseInfo,houseUrl,price,position)
 
             # arrayHousinfo = []
             arrayHousinfo = villageHouseInfo.get(positionInfo.get("href"))
@@ -93,8 +106,9 @@ def update(city: str, area: str) -> (int, int):
             else:
                 villageHouseInfo[positionInfo.get("href")] = [houseInfo(baseInfo, price, position)]
 
-            time.sleep(5)
+            time.sleep(1)
 
+    AddVillage(area, __average__(villageHouseInfo), area_total ,url)
     return int(area_total), __average__(villageHouseInfo)
 
 
@@ -107,9 +121,9 @@ def __average__(villageHouseInfo: dict) -> int:
         for item in v:
             villageTotalAverage += item.getAveragePrice()
         allVilageAverage += villageTotalAverage / len(v)
-        print("village average:",k, villageTotalAverage / len(v), "yuan/pingmi")
+        #print("village average:",k, villageTotalAverage / len(v), "yuan/pingmi")
 
-    return int(villageTotalAverage / len(villageHouseInfo))
+    return int(allVilageAverage / len(villageHouseInfo))
 
 
 def testAveragePrice():
@@ -120,15 +134,11 @@ def testAveragePrice():
 
 
 if __name__ == '__main__':
-    testAveragePrice()
+    #testAveragePrice()
+    db_init()
 
-    totalNum, mp = update("/ershoufang/datuanzhen/")
-    if totalNum is not None:
-        print(totalNum)
-        for (k, v) in mp.items():
-            print(v[0].getVillageName())
-            villageTotalAverage = 0
-            for item in v:
-                villageTotalAverage += item.getAveragePrice()
+#https://sh.lianjia.com/ershoufang/beicai/
 
-            print("average:", villageTotalAverage / len(v), "yuan/pingmi")
+    totalNum, average = update("sh","/ershoufang/beicai/")
+
+    print("totalNum:",totalNum,"average:",average, "yuan/pingmi")

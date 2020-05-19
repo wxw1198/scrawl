@@ -39,7 +39,7 @@ def create_headers():
 
 
 def reqPage(url):
-    print("req page:",url)
+    #print("req page:",url)
     headers = create_headers()
     sleepCount = 0
 

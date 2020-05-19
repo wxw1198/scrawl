@@ -12,7 +12,8 @@ import time
 
 import threadpool
 from threading import Thread, Lock
-import district
+import countryTown
+from db.mysql import *
 
 # from utils.log import *
 
@@ -42,28 +43,10 @@ import district
 # }
 
 cities = {
-    'bj': '北京',
-    'cd': '成都',
-    'cq': '重庆',
-    'cs': '长沙',
-    'dg': '东莞',
-    'dl': '大连',
-    'fs': '佛山',
-    'gz': '广州',
-    'hz': '杭州',
-    'hf': '合肥',
-    'jn': '济南',
-    'nj': '南京',
-    'qd': '青岛',
     'sh': '上海',
     'sz': '深圳',
     'su': '苏州',
-    'sy': '沈阳',
-    'tj': '天津',
     'wh': '武汉',
-    'xm': '厦门',
-    'yt': '烟台',
-    'wx': '无锡',
 }
 lianjia_cities = cities
 beike_cities = cities
@@ -128,32 +111,35 @@ def get_city_ershou_info(params):
     print(params)
     # city = get_city(k, v)
     # if city is not None:
-    totalHouse, average = district.update(params[0])
-    write_str = params[0] + "," + params[1]+ "," + str(totalHouse) + "," + str(average) + "\n"
-    lock.acquire()
-    params[2].write(write_str)
-    lock.release()
-    print(params[1], totalHouse, average)
+    totalHouse, average = countryTown.update(params[0])
 
-def paramList(cn_cities, f):
+    write_str = params[0] + "," + params[1]+ "," + str(totalHouse) + "," + str(average) + "\n"
+    # lock.acquire()
+    # #params[2].write(write_str)
+    # lock.release()
+    print(params[1],params[0], totalHouse, average)
+
+
+
+def paramList(cn_cities):
     thread_param_list = []
     for k, v in cn_cities:
-        group = [k, v, f]
+        group = [k, v]
         thread_param_list.append(group)
 
     return thread_param_list
 
 def update():
     csv_file = os.getcwd() + "/result/{0}.csv".format("all_cities")
-    with open(csv_file, "w") as f:
+    #with open(csv_file, "w") as f:
 
-        start_time = time.time()
-        pool = threadpool.ThreadPool(len(cities.items()))
+    start_time = time.time()
+    pool = threadpool.ThreadPool(len(cities.items()))
 
-        requests = threadpool.makeRequests(get_city_ershou_info, paramList(cities.items(),f))
-        [pool.putRequest(req) for req in requests]
-        pool.wait()
-        print('%d second' % (time.time() - start_time))
+    requests = threadpool.makeRequests(get_city_ershou_info, paramList(cities.items()))
+    [pool.putRequest(req) for req in requests]
+    pool.wait()
+    print('%d second' % (time.time() - start_time))
 
 
 if __name__ == '__main__':
