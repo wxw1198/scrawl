@@ -44,9 +44,7 @@ from db.mysql import *
 
 cities = {
     'sh': '上海',
-    'sz': '深圳',
     'su': '苏州',
-    'wh': '武汉',
 }
 lianjia_cities = cities
 beike_cities = cities
@@ -112,8 +110,10 @@ def get_city_ershou_info(params):
     # city = get_city(k, v)
     # if city is not None:
     totalHouse, average = countryTown.update(params[0])
+    if totalHouse is None or average is None :
+        return
 
-    write_str = params[0] + "," + params[1]+ "," + str(totalHouse) + "," + str(average) + "\n"
+    #write_str = params[0] + "," + params[1]+ "," + str(totalHouse) + "," + str(average) + "\n"
     # lock.acquire()
     # #params[2].write(write_str)
     # lock.release()
@@ -130,7 +130,7 @@ def paramList(cn_cities):
     return thread_param_list
 
 def update():
-    csv_file = os.getcwd() + "/result/{0}.csv".format("all_cities")
+   # csv_file = os.getcwd() + "/result/{0}.csv".format("all_cities")
     #with open(csv_file, "w") as f:
 
     start_time = time.time()
