@@ -2,261 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6515c189-ce04-4e71-8950-26de688be6da" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/result/all_cities.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/bj.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/bj__ershoufang_changping_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/bj__ershoufang_chaoyang_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/bj__ershoufang_daxing_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/bj__ershoufang_dongcheng_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/bj__ershoufang_fangshan_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/bj__ershoufang_fengtai_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/bj__ershoufang_haidian_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/bj__ershoufang_huairou_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/bj__ershoufang_mentougou_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/bj__ershoufang_miyun_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/bj__ershoufang_pinggu_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/bj__ershoufang_shijingshan_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/bj__ershoufang_shunyi_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/bj__ershoufang_tongzhou_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/bj__ershoufang_xicheng_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/bj__ershoufang_yanqing_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/bj__ershoufang_yizhuangkaifaqu_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/cd.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/cd__ershoufang_chenghua_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/cd__ershoufang_gaoxin7_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/cd__ershoufang_gaoxinxi1_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/cd__ershoufang_jinjiang_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/cd__ershoufang_jinniu_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/cd__ershoufang_qingyang_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/cd__ershoufang_shuangliu_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/cd__ershoufang_tianfuxinqu_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/cd__ershoufang_wenjiang_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/cd__ershoufang_wuhou_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/cq.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/cq__ershoufang_banan_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/cq__ershoufang_jiangbei_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/cq__ershoufang_jiulongpo_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/cq__ershoufang_nanan_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/cq__ershoufang_shapingba_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/cq__ershoufang_yubei_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/cs.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/cs__ershoufang_changshaxian_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/cs__ershoufang_furong_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/cs__ershoufang_kaifu_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/cs__ershoufang_liuyang_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/cs__ershoufang_ningxiang_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/cs__ershoufang_tianxin_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/cs__ershoufang_wangcheng_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/cs__ershoufang_yuelu_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/cs__ershoufang_yuhua_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/dg.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/dg__ershoufang_changanzhen1_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/dg__ershoufang_changpingzhen_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/dg__ershoufang_chashanzhen_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/dg__ershoufang_dalangzhen_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/dg__ershoufang_dalingshanzhen1_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/dg__ershoufang_daojiaozhen_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/dg__ershoufang_dongchengqu_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/dg__ershoufang_dongkengzhen_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/dg__ershoufang_fenggangzhen_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/dg__ershoufang_gaobuzhen1_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/dg__ershoufang_henglizhen_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/dg__ershoufang_hongmeizhen_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/dg__ershoufang_houjiezhen2_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/dg__ershoufang_huangjiangzhen_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/dg__ershoufang_humenzhen3_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/dg__ershoufang_liaobuzhen1_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/dg__ershoufang_machongzhen_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/dg__ershoufang_nanchengqu_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/dg__ershoufang_qiaotouzhen_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/dg__ershoufang_qingxizhen_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/dg__ershoufang_qishizhen_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/dg__ershoufang_shatianzhen_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/dg__ershoufang_shijiezhen1_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/dg__ershoufang_shilongzhen_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/dg__ershoufang_shipaizhen_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/dg__ershoufang_songshanhu_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/dg__ershoufang_tangxiazhen_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/dg__ershoufang_wanchengqu_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/dg__ershoufang_wangniudunzhen_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/dg__ershoufang_wanjiangqu_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/dg__ershoufang_xiegangzhen_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/dg__ershoufang_zhangmutouzhen_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/dg__ershoufang_zhongtangzhen_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/dl.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/dl__ershoufang_ganjingzi_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/dl__ershoufang_gaoxinyuanqu_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/dl__ershoufang_jinzhou_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/dl__ershoufang_kaifaqudl_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/dl__ershoufang_lvshunkou_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/dl__ershoufang_pulandian_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/dl__ershoufang_shahekou_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/dl__ershoufang_xigang_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/dl__ershoufang_zhongshan_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/fs.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/fs__ershoufang_baiyun_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/fs__ershoufang_chancheng_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/fs__ershoufang_gaoming1_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/fs__ershoufang_nanhai_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/fs__ershoufang_panyu_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/fs__ershoufang_sanshui1_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/fs__ershoufang_shunde_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/gz.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/gz__ershoufang_baiyun_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/gz__ershoufang_conghua_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/gz__ershoufang_haizhu_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/gz__ershoufang_huadou_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/gz__ershoufang_huangpugz_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/gz__ershoufang_liwan_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/gz__ershoufang_nanhai_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/gz__ershoufang_nansha_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/gz__ershoufang_panyu_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/gz__ershoufang_shunde_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/gz__ershoufang_tianhe_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/gz__ershoufang_yuexiu_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/gz__ershoufang_zengcheng_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/hf.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/hf__ershoufang_baohe_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/hf__ershoufang_binhuxinqu_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/hf__ershoufang_changfeng_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/hf__ershoufang_chaohushi_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/hf__ershoufang_feidong_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/hf__ershoufang_feixi_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/hf__ershoufang_gaoxin8_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/hf__ershoufang_jingkai2_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/hf__ershoufang_lujiangxian_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/hf__ershoufang_luyang_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/hf__ershoufang_shushan_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/hf__ershoufang_xinzhan_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/hf__ershoufang_yaohai_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/hf__ershoufang_zhengwu_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/hz.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/hz__ershoufang_xihu_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/jn.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/jn__ershoufang_changqing_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/jn__ershoufang_gaoxin_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/jn__ershoufang_huaiyin_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/jn__ershoufang_jiyang_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/jn__ershoufang_licheng_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/jn__ershoufang_lixia_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/jn__ershoufang_pingyin_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/jn__ershoufang_shanghe_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/jn__ershoufang_shizhong_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/jn__ershoufang_tianqiao_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/jn__ershoufang_zhangqiu1_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/nj.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/nj__ershoufang_gaochun_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/nj__ershoufang_gulou_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/nj__ershoufang_jiangning_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/nj__ershoufang_jianye_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/nj__ershoufang_lishui_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/nj__ershoufang_liuhe_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/nj__ershoufang_pukou_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/nj__ershoufang_qinhuai_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/nj__ershoufang_qixia_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/nj__ershoufang_xuanwu_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/nj__ershoufang_yuhuatai_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/qd.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/qd__ershoufang_chengyang_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/qd__ershoufang_huangdao_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/qd__ershoufang_jiaozhou_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/qd__ershoufang_jimo_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/qd__ershoufang_laixi_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/qd__ershoufang_laoshan_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/qd__ershoufang_licang_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/qd__ershoufang_pingdu_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/qd__ershoufang_shibei_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/qd__ershoufang_shinan_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/sh.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/sh__ershoufang_baoshan_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/sh__ershoufang_changning_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/sh__ershoufang_chongming_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/sh__ershoufang_fengxian_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/sh__ershoufang_hongkou_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/sh__ershoufang_huangpu_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/sh__ershoufang_jiading_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/sh__ershoufang_jingan_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/sh__ershoufang_jinshan_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/sh__ershoufang_minhang_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/sh__ershoufang_pudong_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/sh__ershoufang_putuo_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/sh__ershoufang_qingpu_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/sh__ershoufang_songjiang_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/sh__ershoufang_xuhui_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/sh__ershoufang_yangpu_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/sh_ershoufang_pudong.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/su.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/su__ershoufang_gaoxin1_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/su__ershoufang_gongyeyuan_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/su__ershoufang_gusu_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/su__ershoufang_kunshan_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/su__ershoufang_wujiang_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/su__ershoufang_wuzhong_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/su__ershoufang_xiangcheng_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/sy.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/sy__ershoufang_kangpingxian_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/sz.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/sz__ershoufang_baoanqu_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/sz__ershoufang_dapengxinqu_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/sz__ershoufang_futianqu_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/sz__ershoufang_guangmingqu_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/sz__ershoufang_longgangqu_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/sz__ershoufang_longhuaqu_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/sz__ershoufang_luohuqu_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/sz__ershoufang_nanshanqu_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/sz__ershoufang_pingshanqu_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/sz__ershoufang_yantianqu_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/tj.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/tj__ershoufang_beichen_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/tj__ershoufang_dongli_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/tj__ershoufang_hebei_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/tj__ershoufang_hedong_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/tj__ershoufang_heping_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/tj__ershoufang_hexi_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/tj__ershoufang_hongqiao_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/tj__ershoufang_jinnan_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/tj__ershoufang_nankai_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/tj__ershoufang_xiqing_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/wh.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/wh__ershoufang_caidian_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/wh__ershoufang_donghugaoxin_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/wh__ershoufang_dongxihu_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/wh__ershoufang_hannan_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/wh__ershoufang_hanyang_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/wh__ershoufang_hongshan_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/wh__ershoufang_huangbei_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/wh__ershoufang_jiangan_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/wh__ershoufang_jianghan_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/wh__ershoufang_jiangxia_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/wh__ershoufang_qiaokou_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/wh__ershoufang_qingshan_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/wh__ershoufang_wuchang_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/wh__ershoufang_xinzhou_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/wh__ershoufang_zhuankoukaifaqu_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/wx.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/wx__ershoufang_binhu_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/wx__ershoufang_huishan_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/wx__ershoufang_jiangyinshi_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/wx__ershoufang_liangxi_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/wx__ershoufang_xinwu_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/wx__ershoufang_xishan_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/wx__ershoufang_yixingshi_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/xm.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/xm__ershoufang_haicang_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/xm__ershoufang_huli_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/xm__ershoufang_jimei_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/xm__ershoufang_siming_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/xm__ershoufang_tongan_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/xm__ershoufang_xiangan_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/yt.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/yt__ershoufang_changdaoxian_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/yt__ershoufang_fushan_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/yt__ershoufang_gaoxinqu_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/yt__ershoufang_kaifaqu4_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/yt__ershoufang_laishan_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/yt__ershoufang_mouping_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/yt__ershoufang_penglai_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/yt__ershoufang_zhifu_.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -277,7 +23,6 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
@@ -408,18 +153,6 @@
       </list>
     </recent_temporary>
   </component>
-  <component name="ServiceViewManager">
-    <option name="viewStates">
-      <list>
-        <serviceView>
-          <treeState>
-            <expand />
-            <select />
-          </treeState>
-        </serviceView>
-      </list>
-    </option>
-  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -444,6 +177,7 @@
       <workItem from="1588858667899" duration="4763000" />
       <workItem from="1589458927722" duration="1486000" />
       <workItem from="1589891751132" duration="16444000" />
+      <workItem from="1599478874569" duration="11000" />
     </task>
     <task id="LOCAL-00001" summary="store file">
       <created>1578567515605</created>
@@ -456,7 +190,7 @@
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="2" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -468,6 +202,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="store file" />
@@ -576,16 +311,16 @@
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/fang$district.coverage" NAME="district Coverage Results" MODIFIED="1578567407729" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/scrawl$mysql.coverage" NAME="mysql Coverage Results" MODIFIED="1587645833953" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/db" />
-    <SUITE FILE_PATH="coverage/scrawl$village.coverage" NAME="village Coverage Results" MODIFIED="1587280095834" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/fang$test2.coverage" NAME="test2 Coverage Results" MODIFIED="1578625309138" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/fang$area.coverage" NAME="area Coverage Results" MODIFIED="1578462636488" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/fang$test.coverage" NAME="test Coverage Results" MODIFIED="1578629543577" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/scrawl$area.coverage" NAME="area Coverage Results" MODIFIED="1587178689356" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/scrawl$countryTown.coverage" NAME="countryTown Coverage Results" MODIFIED="1589459168553" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/scrawl$district.coverage" NAME="countryTown Coverage Results" MODIFIED="1587298292005" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/fang$main.coverage" NAME="main Coverage Results" MODIFIED="1578654303888" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/fang$test2.coverage" NAME="test2 Coverage Results" MODIFIED="1578625309138" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/scrawl$area.coverage" NAME="area Coverage Results" MODIFIED="1587178689356" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/scrawl$mysql.coverage" NAME="mysql Coverage Results" MODIFIED="1587645833953" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/db" />
+    <SUITE FILE_PATH="coverage/fang$area.coverage" NAME="area Coverage Results" MODIFIED="1578462636488" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/scrawl$main.coverage" NAME="main Coverage Results" MODIFIED="1590921014922" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/scrawl$village.coverage" NAME="village Coverage Results" MODIFIED="1587280095834" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/fang$district.coverage" NAME="district Coverage Results" MODIFIED="1578567407729" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/fang$test.coverage" NAME="test Coverage Results" MODIFIED="1578629543577" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/scrawl$district.coverage" NAME="countryTown Coverage Results" MODIFIED="1587298292005" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
