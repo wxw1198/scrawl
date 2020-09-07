@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6515c189-ce04-4e71-8950-26de688be6da" name="Default Changelist" comment="">
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+=======
+>>>>>>> 111
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -182,6 +185,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       <workItem from="1599478874569" duration="11000" />
 <<<<<<< HEAD
       <workItem from="1599479469767" duration="11000" />
@@ -215,7 +219,13 @@
       <workItem from="1599478742608" duration="19000" />
 >>>>>>> 111
 >>>>>>> merge
+<<<<<<< HEAD
 >>>>>>> merge
+=======
+=======
+      <workItem from="1599478742608" duration="19000" />
+>>>>>>> 111
+>>>>>>> 111
     </task>
     <task id="LOCAL-00001" summary="store file">
       <created>1578567515605</created>
