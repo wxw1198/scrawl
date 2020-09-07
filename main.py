@@ -1,6 +1,6 @@
 import city
 from db.mysql import *
-
+#test =1
 def update():
     db_init()
     city.update()
