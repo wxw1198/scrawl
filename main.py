@@ -3,6 +3,7 @@ from db.mysql import *
 
 def update():
     db_init()
+    ### = master
     city.update()
 
     ### master-4
